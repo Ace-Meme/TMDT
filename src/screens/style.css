@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+td, th{
+    border: 1px solid #52734D;
+    padding: 10px;
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    background-color: #91C788;
+    align-items: center;
+    justify-content: center;
+    color: white
+}
+.bannerIntro{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    background-color: #DDFFBC;
+    align-items: center;
+    justify-content: center;
+    color: #52734D
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0.3;
+        bottom: 10vh;
+        display: block;
+    }
+    25% {
+        opacity: 1;
+        bottom: 13vh;
+        display: block;
+    }
+    100%{
+        opacity: 1;
+        bottom: 13vh;
+        display: none;
+    }
+}
+
+@keyframes fade {
+    from {
+        display: block;
+        opacity: 1;
+    }
+    to{
+        display: none;
+        opacity: 0.3;
+    }
+    
+}
+
+.overlay{
+    position: fixed;
+    bottom: 10vh;
+    left: 10vw;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.overlayNotification{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50vw;
+    min-width: 200px;
+    height: 50vh;
+    min-height: 50%;
+    gap: 10px;
+}
+
+.overlayNotification button{
+    padding: 10px;
+    background-color: #52734D;
+    color: white;
+    border-radius: 7px;
+}
+
+.overlayBackground{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+/*=============================== Root ============================*/
+.navbar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #72916e75;
+}
+.footer{
+    background-color: #52734D;
+    color: white;
+    padding: 20px;
+}
+.PersonalLayout{
+    display: flex;
+    gap: 10px;
+}
+.PersonalLayout button{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+}
+.PersonalLayout button:hover{
+    background-color: rgb(199, 225, 187);
+}
+/*============================== Basket ============================*/
+.Basket{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.SumMoney {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    min-height: 50px;
+    background-color: white;
+    position: fixed;
+    bottom: 0vh;
+    color: black;
+}
+
+.Payment{
+    background-color: #52734D;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*============================= PickTicket ===========================*/
+
+.daypicker{
+    font-size: 20px;
+    display: flex;
+    background-color: #52734D;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.dayconfirm{
+    background-color: #DDFFBC;
+    font-size: 18px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.Shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    gap: 20px;
+}
+
+/*====================================== Profile ===================================================*/
+.History {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*========================= Button=========================*/
+.NavigateTicketPage {
+    color: white;
+    background-color: #52734D;
+    width: 25%;
+    min-width: 150px;
+    font-size: 20px;
+    font-weight: 200;
+    padding: 5px;
+    border-radius: 10px;
+}
+.HugeButton {
+    color: white;
+    background-color: #52734D;
+    width: 40%;
+    min-width: 250px;
+    min-height: 80px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.NavigateHome {
+    background-color: white;
+    font-size: 18px;
+    font-weight: 200;
+    border: none;
+    padding: 10px;
+}
+
+.NavigateHome:hover, .NavigateHome:disabled{
+    background-color: rgb(199, 225, 187);
+    border-radius: 10px;
+}
+.IntroButton{
+    background-color: #91C788;
+    color: white;
+    min-width: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+}
+
+/*========================= Cards =========================*/
+
+.TicketCard {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    background-color: white;
+    color: #52734D;
+    border-radius: 10px;
+    border: 1px solid #52734D;
+    padding: 20px;
+    font-size: 20px;
+    min-width: 200px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+.changingNum{
+    background-color: #91C788;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Picked{
+    border: 5px solid #52734D;
+}
+
+.BasketCard {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    background-color: #FEFFDE;
+    border: 1px solid #52734D;
+    border-radius: 10px;
+    color: #52734D;
+    font-size: 24px;
+    padding: 10px;
+}
+.TicketCard:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.adding {
+    background-color: #FEFFDE;
+    border-radius: 10px;
+    padding: 10px;
+}
+.ExcludeButton {
+    margin-top: 10px;
+    background-color: #DDFFBC;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.HistoryCard{
+    background-color: #DDFFBC;
+    color: #52734D;
+    font-size: 24px;
+    border: 1px solid #52734D;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*===========================Chat room=====================*/
+
+.messageContsent{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.messageContreceived{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.message{
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    min-width: 250px;
+    max-width: 600px;
+    gap: 10px;
+}
+.displayName{
+    position: relative;
+    top: -5px;
+    right: -100px;
+}
+.message img{
+    border-radius: 10px;
+    
+}
+.sent{
+    background-color: #DDFFBC;
+    color: #52734D;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: start;
+    justify-self: flex-end;
+}
+.received{
+    background-color: #52734D;
+    color: white;
+    justify-content: start;
+    align-items: start;
+}
+.SendForm{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.SendForm input{
+    border-radius: 10px;
+    height: 40px;
+    width: 80%;
+}
+
+.SendForm button{
+    background-color: #52734D;
+    color: white;
+    min-width: 80px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+}
