@@ -39,7 +39,13 @@ export function Ticket(){
         event.preventDefault();
         setLoading(true);
         let f = document.forms['create'];
-        let id = ticket.length;
+        let id = 0;
+        if(ticket.length != 0){
+            for(let i=0; i<ticket.length; i++){
+                if(id < ticket[i].ticket_id) id = ticket[i].ticket_id;
+                id++;
+            }
+        }
         
         /////Check
         if(f['name'].value == "" || f['name'].value == undefined || f['price'].value == undefined || f['price'].value == "" || Number(f['price'].value) <= 0){
